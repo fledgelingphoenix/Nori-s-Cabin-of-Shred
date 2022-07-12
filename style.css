@@ -1,10 +1,147 @@
+body {
+  background-color:azure;
+  display: grid;
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+  gap: 10px;
+  grid-template-areas: 
+  "Nori Nori" 
+  "nav nav"
+  "h3 p" 
+  "footer footer";
+  grid-auto-flow: column;
+}
 
 #Nori {
+  background-image: url('https://www.example.com/image.jpg');
   width: 100%;
   height: 500 px;
   background-color: gray;
+  display: inline-flex;
+  flex: 3 3 500px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  grid-row-start: 1;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 12;
+  z-index: 10;
+  justify-content: center;
 }
 
 h1 {
-  color:aqua
-};
+  text-align: center;
+  color: aqua;
+  font-family: "Abril Fatface";
+  font-weight: 900;
+  flex: 1 1 350px;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 4;
+  grid-column-end: 10;
+}
+
+h2 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 4;
+  grid-column-end: 10;
+}
+;
+
+a[href*='About'] {
+  color: lightgreen;
+  flex: 1 1 200px;
+}
+
+;
+
+a[href*='Booking'] {
+  color: lightblue;
+  flex: 1 1 200px;
+}
+
+;
+
+a[href*='Contact'] {
+  color: lightpink;
+  flex: 1 1 200px;
+}
+
+;
+
+a:hover {
+  color: darkorange;
+  flex: 1 1 200px;
+}
+
+p {
+  font-size: 18px;
+  font: helvetica;
+  text-align: center;
+  word-spacing: 0.25 em;
+  line-height: 1.4;
+  flex: 1 1 20px;
+}
+
+h3 {
+  font-weight: bold;
+  color: springgreen;
+  font-family: Merriweather;
+  flex: 1 1 200px;
+}
+
+table {
+  align-self: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 200px;
+}
+
+#booking {
+  text-align: center;
+  flex: 1 1 200px;
+}
+
+h3,
+h4 {
+  text-align: center;
+  flex: 1 1 200px;
+}
+
+.button {
+  border: 2px solid darkturquoise;
+  border-radius: 5px;
+  color: #F8F8F8;
+  text-shadow: 0 -2px #006bb3;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2), 0px -2px 2px rgba(255, 255, 255, 0.5) inset, 0 2px 2px rgba(255, 255, 255, 0.8) inset;
+  background: aqua;
+  background: linear-gradient(darkblue, skyblue);
+  text-shadow: 0 -2px white;
+}
+
+.button:hover {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1), 0px -2px 2px rgba(255, 255, 255, 0.25) inset, 0 2px 2px rgba(255, 255, 255, 0.4) inset;
+  background: aqua;
+  
+  background: linear-gradient(darkblue, skyblue);
+  border-color: darkturquoise;
+ 
+}
+
+.button:active {
+  margin-top: 2px;
+  margin-bottom: -2px;
+  box-shadow: 0px 2px 2px rgba(63, 63, 63, 0.1), 0px -2px 2px rgba(255, 255, 255, 0.25) inset, 0 2px 2px rgba(255, 255, 255, 0.4) inset;
+  border-color: darkturquoise;
+ 
+  background: linear-gradient(linear-gradient(darkblue, skyblue)); 
+}
+
+nav {
+  background-color:rgba(63, 63, 63, 0.1);
+  color: coral;
+}
